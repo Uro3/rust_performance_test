@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    rs_tag_builder (0.1.0)
+      rb_sys (~> 0.9.39)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (13.0.6)
+    rake-compiler (1.2.1)
+      rake
+    rb_sys (0.9.65)
+
+PLATFORMS
+  arm64-darwin-20
+
+DEPENDENCIES
+  rake (~> 13.0)
+  rake-compiler (~> 1.2.0)
+  rs_tag_builder!
+
+BUNDLED WITH
+   2.3.26

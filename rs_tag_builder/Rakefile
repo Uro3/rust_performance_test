@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+require "rake/extensiontask"
+
+Rake::ExtensionTask.new("rs_tag_builder") do |ext|
+  ext.lib_dir = "lib/rs_tag_builder"
+  ext.source_pattern = "*.{rs,toml}"
+end
