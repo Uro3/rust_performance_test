@@ -1,4 +1,4 @@
-use magnus::{define_class, function, method, prelude::*, Error};
+use magnus::{class, define_class, function, method, prelude::*, Error};
 use std::collections::HashMap;
 use chrono::Local;
 
@@ -63,7 +63,7 @@ impl RSTableRenderer {
 
 #[magnus::init]
 fn init() -> Result<(), Error> {
-    let class = define_class("RSTableRenderer", Default::default())?;
+    let class = define_class("RSTableRenderer", class::object())?;
     class.define_singleton_method("new", function!(RSTableRenderer::new, 2))?;
     class.define_method("render", method!(RSTableRenderer::render, 0))?;
     Ok(())
